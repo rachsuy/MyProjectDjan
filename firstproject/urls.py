@@ -21,6 +21,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^public/', views.index),
     url(r'^', include('santec.urls')),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
 ]

@@ -1,5 +1,5 @@
 from django.http import *
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 def appointment(request):
@@ -11,8 +11,9 @@ def index(request):
     test = 'Esdras'
     return render(request, "index.html", {'nom': test})
 
-def log(request):
+def login(request):
     test = 'Esdras'
-    return render(request, "log.html", {'nom':test})
+    #return render(request, "log.html", {'nom':test})
+    redirect("appointment")
     
     
